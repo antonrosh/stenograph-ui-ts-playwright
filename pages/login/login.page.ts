@@ -10,11 +10,11 @@ export class LoginPage {
     this.page = page;
     this.loginInput = page.locator("#UserName");
     this.passwordInput = page.locator("#Password");
-    this.loginButton = page.locator("[type='submit']");
+    this.loginButton = page.locator(".btn-login");
   }
 
   async logIn(username: string, password: string) {
-    await this.loginInput.fill(username);
+    await this.loginInput.type(username, { delay: 100 });
     await this.passwordInput.fill(password);
     await this.loginButton.click();
   }
