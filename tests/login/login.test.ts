@@ -30,7 +30,7 @@ const test = base.extend<TestFixtures>({
   },
 });
 
-test.describe("Login Page Test Suite Desctop", () => {
+test.describe.serial("Login Page Test Suite Desctop", () => {
   /**
    * Scenario 1 : Open Login page and login using valid credentials
    * Given User is on Login page
