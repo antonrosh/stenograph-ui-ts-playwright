@@ -14,7 +14,7 @@ export class LoginPage {
   }
 
   async logIn(username: string, password: string) {
-    await this.loginInput.type(username, { delay: 100 });
+    await this.loginInput.fill(username);
     await this.passwordInput.fill(password);
     await this.loginButton.click();
   }
